@@ -132,7 +132,7 @@ nav{
     top: 0;
     left: 0;
     opacity: 0; /* Make images transparent initially */
-    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    transition: opacity 3s ease-in-out; /* Smooth transition for opacity */
 }
 .slideshow img.active {
     opacity: 1; /* Make the active image fully visible */
@@ -167,4 +167,68 @@ footer {
 
 .footer-section ul li a:hover {
     color: #f1f1f1;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates two columns */
+    grid-template-rows: repeat(2, 1fr); /* Creates two rows */
+    gap: 2px; /* Adjust the gap between items */
+ }
+ 
+ .item {
+     background-color:antiquewhite;
+     aspect-ratio: 1 / 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .item1{
+    width: 100%;
+    position: relative;
+ }
+ .item2{
+    width: 100%;
+    position: relative;
+ }
+ 
+
+ .item img {
+    height: 63%; /* Adjust height to fill the container */
+    width: 93%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Keep images transparent initially */
+    transition: opacity 2s ease-in-out; /* Smooth transition for opacity */
+    z-index: 1; /* Ensure images stack correctly */
+    padding: 15px;
+}
+
+.item img.active {
+    opacity: 1; /* Make the active image fully visible */
+    z-index: 2; /* Ensure the active image is on top */
+}
+.item .below_img {
+     margin: 371px 224px 36px 15px;
+     font-family: "Rubik", sans-serif;
+     font-size: medium;
+     font-size: 26px;
+}
+.explore-btn {
+    padding: 17px 33px;
+    /* margin-left: 10px; */
+    margin: 295px 119px 0px 28px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: #007bff;
+    color: #ffffff;
+    font-family: "Rubik", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 20px;
+}
+
+.explore-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    color: #ffffff; /* Keep text color unchanged */
 }
